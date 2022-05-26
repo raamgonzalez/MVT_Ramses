@@ -7,8 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>El familiar es: {{family_01.name}}. Su fecha de nacimiento es: {{family_01.birth_date}}. Observaciones: {{family_01.description}}</h3>
-    <h3>El familiar es: {{family_02.name}}. Su fecha de nacimiento es: {{family_02.birth_date}}. Observaciones: {{family_02.description}}</h3>
-    <h3>El familiar es: {{family_03.name}}. Su fecha de nacimiento es: {{family_03.birth_date}}. Observaciones: {{family_03.description}}</h3>
+
+    {% for familiar in context %}
+    <h3>El familiar es: {{familiar.name}}. Su fecha de nacimiento es: {{familiar.birth_date}}. Observaciones: {{familiar.description}}.</h3>
+    {% endfor %}
 </body>
 </html>
